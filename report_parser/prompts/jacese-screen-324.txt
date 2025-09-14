@@ -1,0 +1,8 @@
+Input:
+After I click the agree button, I entered the main page. However, the dollar sign $ is duplicated.
+
+Reasoning:
+The bug described a buggy behavior "dollar sign is duplicated". By this, we can understand that there are two dollar sign shown on the screen, i.e., $$. This can be captured by declaring a UI element from the DSL, as e=E("desc":"$$")
+
+Output:
+e=E("desc":"duplicate dollar sign") AND s=S() AND in_screen(e,s)

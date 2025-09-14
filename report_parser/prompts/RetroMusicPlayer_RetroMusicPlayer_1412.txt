@@ -1,0 +1,20 @@
+Input:
+Describe the bug
+If I try to scan a folder with music outside of /storage/emulated/0/Music , in my case it's /storage/emulated/0/Audiobooks , then a message shows that it has started the scanning process ( scanning 1 of 789 ), but then this message immediately disappears, as if the scanning process has crashed, without finishing. So the music from /storage/emulated/0/Audiobooks doesn't appear in albums , but I still can play it through folders .
+Another app, that I'm using for audiobooks, has no problem with that, so I can add folders outside /storage/emulated/0/Music .
+I've tried the following solutions, but it didn't help: #898.
+Expected behavior
+Music in folders outside of /storage/emulated/0/Music should also be added to the library. Device info:
+Device: Google Pixel 4a Android version: 12
+App version: 5.8.4_0526202252
+
+Reasoning:
+The sentence describing the buggy behavior is "then a message shows that it has started the scanning process ( scanning 1 of 789 ), but then this message immediately disappears, as if the scanning process has crashed, without finishing".
+It describes that a UI element on the screen (showing "scanning 1 of 789") disappeared. 
+To describe this process using the DSL, we first define a UI element e=E(desc="scanning 1 of 789"). 
+Then to describe that it disappeared from the screen, we use s1 and s2 to represent the two consecutive UI screens, where s1 has element e and s2 doesn't have.
+This can be captured by s1=S() AND s2=S() AND in_screen(e,s1) AND not in_screen(e,s2).
+If we conjunct the definition of e into this expression, we can get the final output.
+
+Output:
+s1=S() AND s2=S() AND e=E("desc":"scanning 1 of 789") AND in_screen(e,s1) AND not in_screen(e,s2)

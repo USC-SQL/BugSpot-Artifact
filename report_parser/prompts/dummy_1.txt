@@ -1,0 +1,8 @@
+Input:
+An error message shows up on the screen, saying that the app has crashed.
+
+Reasoning: 
+There is only manifestation of this bug, which is display a UI element on the screen. The UI element contains text "the app has crashed".
+
+Output:
+e=E("desc":"the app has crashed") AND s=S("is_crash":True) AND in_screen(e,s)

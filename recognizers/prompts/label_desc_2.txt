@@ -1,0 +1,15 @@
+### Input
+Target widget description: 
+Incomplete Notification
+
+Widgets on the UI:
+1. TYPE: button. LABEL: Notification. DESC: .
+2. TYPE: other. LABEL: . DESC: text box.
+
+
+### Output
+{
+    "id": null,
+    "reason": "The description looks sim widget 1 since they both have the same word Notification. However, widget 1 doesn't satisfy the \"incomplete\" part as described in the target. Therefore, there is no match.",
+    "confidence": 9
+}

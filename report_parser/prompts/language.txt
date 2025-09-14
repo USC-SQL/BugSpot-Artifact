@@ -1,0 +1,8 @@
+Input:
+I went to Setting and tried to change the language to Franch. However, the app still shows English.
+
+Reasoning:
+The report describes a bug causing users unable to change language of the app. As mentioned in the bug report, after changing the settings, the app still shows English words. Therefore, we declare a UI element in the DSL to describe this situation, e=E("desc":"text in English")
+
+Output:
+e=E("desc":"text in English") AND s=S() AND in_screen(e,s)

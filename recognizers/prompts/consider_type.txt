@@ -1,0 +1,15 @@
+### Input
+Target widget description: 
+note name text box
+
+Widgets on the UI:
+1. TYPE: button. LABEL: name. DESC: .
+2. TYPE: input box. LABEL: . DESC: type the name.
+3. TYPE: other. LABEL: . DESC: display name.
+
+### Output
+{
+    "id": 2,
+    "reason": "The description of target widget is similar to the label of widget 1, and desc of widget 2 and 3. However, the target description mentioned the type of the widget, text box. Therefore, only widget 2 matches this type.",
+    "confidence": 9
+}

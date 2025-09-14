@@ -1,0 +1,9 @@
+Input:
+Keyboard keeps showing after opening settings menu.
+
+Reasoning:
+The sentence descrbing the buggy behavior is "Keyboard keeps showing". It describes that the mobile device showing the keyboard. 
+This can be captured by the DSL as S("keyboard":"on")
+
+Output:
+s=S("keyboard":"on")

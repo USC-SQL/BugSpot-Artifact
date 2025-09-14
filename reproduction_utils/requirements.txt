@@ -1,0 +1,6 @@
+pyaxmlparser==0.3.27
+lxml==4.9.2
+spacy==3.5.1
+uiautomator2==2.16.13
+opencv-python==4.7.0.72
+numpy

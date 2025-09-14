@@ -1,0 +1,8 @@
+Input:
+The app crashed after I opened the settings.
+
+Reasoning:
+The manifestation of this bug is that, the current UI screen shows an app crash. It doesn't have other manifestation. Even it mentioned a UI element "Settings", we don't include this into the DSL expression for this crash bug report.
+
+Output:
+s=S("is_crash":True)

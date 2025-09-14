@@ -1,0 +1,13 @@
+Input:
+On a fresh install, DNS / DNS + Firewall notification action is enabled by default, although PAUSE / STOP is shown as default.
+
+Reasoning:
+The bug report has two parts describing the buggy behavior. One is "_DNS / DNS + Firewall_ notification action is enabled by default" and the other is "_PAUSE / STOP_ is shown as default".
+The first behavior describes a UI elemnet showing on the screen, with its description to be "DNS / DNS + Firewall" and status to be "checked". 
+This can be represented as E(desc="DNS / DNS + Firewall", checked=True).
+The second behavior is also displaying a UI elemnt on the screen, with description "PAUSE / STOP". We can infer from the bug report that, it is not enabled. Therefore, its status is "not checked". 
+This behavior can be described by the DSL as E(desc="PAUSE / STOP", checked=False).
+Together, we use AND to conjunct both manifestation as the final output.
+
+Output:
+s=S() AND e1=E("desc":"DNS / DNS + Firewall", "checked":True) AND e2=E("desc":"PAUSE / STOP", "checked":False) AND in_screen(e1,s) AND in_screen(e2,s)

@@ -1,0 +1,16 @@
+### Input
+Target widget description: 
+pch
+
+Widgets on the UI:
+1. TYPE: button. LABEL: peaches. DESC: .
+2. TYPE: other. LABEL: . DESC: fruit menu.
+3. TYPE: other. LABEL: . DESC: pches.
+
+
+### Output
+{
+    "id": null,
+    "reason": "The desciption looks similar to the label of widget 1 and desc of widget 3. However, the target description looks like an incomplete word. In this case, we look for widgets with label exactly matching the desciption (to be the SAME). Therefore there is no match in this case.",
+    "confidence": 9
+}

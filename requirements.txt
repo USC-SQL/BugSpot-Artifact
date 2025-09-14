@@ -1,0 +1,10 @@
+requests
+pymongo
+openai
+pyaxmlparser
+uiautomator2
+opencv-python
+psutil
+bs4
+spacy
+scikit-learn

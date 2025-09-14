@@ -1,0 +1,8 @@
+Input:
+I entered "xyz" in the input box and pressed delete on keyboard. However, the app didn't delete the last letter but deleted the second last letter.
+
+Reasoning:
+The report describes a bug when the deletion misfunction. Based on the bug report, user entered "xyz" originally. After deletion, the second last letter, i.e., "y" is removed. Then, the remaining text shown on the screen is "xz". We can declare a UI element in the DSL to describe this, e=E("desc":"xz")
+
+Output:
+e=E("desc":"xz") AND s = S() AND in_screen(e,s)

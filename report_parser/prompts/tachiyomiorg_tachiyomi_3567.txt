@@ -1,0 +1,24 @@
+Input:
+Steps to reproduce
+1. Open library
+2. Open sort menu
+3. Tap on "sort by date added"
+4. Try to change ascending order to descending order.
+
+Expected behavior
+Newly added manga should appear first.
+
+Actual behavior
+No change. Oldest added manga persist at the top.
+Other details
+Additional details and attachments.
+
+Reasoning:
+The bug report describes an issue when the user tried to change the order of mangas, nothing changed on the screen.
+In other words, the app is unresponsive. 
+Such unresponsiveness also means the UI screens before and after the last reproduction step is the same. 
+To describe this in DSL, we define two UI screens s1=S(), s2=S(). We use s1==s2 to represent that they are the same.
+We conjunct them to get the final output.
+
+Output:
+s1=S() AND s2=S() AND s1==s2

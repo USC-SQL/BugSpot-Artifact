@@ -1,0 +1,24 @@
+Input: 
+Steps to reproduce
+- play a video
+- move to a different app / sleep your device
+- wait a dozen minutes (not sure about it)
+- back to the app
+Expected behavior
+- miniplayer is in its standard place
+Actual behavior
+The miniplayer is glued to the bottom of the screen, instead of being settled above the navigation menu
+LibreTube version
+LibreTube 0.3.2
+Android version
+Android 11
+Other details
+![Screenshot_2022-06-21-16-01-12-695_com github libretube debug](https://user-images.githubusercontent.com/64419373/174821995-c60b3ddf-ec80-4d6b-aa35-46f792fe25c1.jpg)
+
+Reasoning:
+The buggy behavior is described by the "actual behavior" part of the bug report, as "The miniplayer is glued to the bottom of the screen". 
+As being said, the bug displayed a UI element on the screen, with its description as "miniplayer" and location as "bottom of the screen". 
+These can be captured by the DSL as e=E(desc="miniplayer") AND s=S() AND in_screen(e,s).
+
+Output:
+e=E("desc":"miniplayer") AND s=S() AND in_screen(e,s)
